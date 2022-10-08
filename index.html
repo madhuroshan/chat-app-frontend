@@ -10,14 +10,14 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
     </style>
-    <script src="login.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
       <h1 class="logo">weChat</h1>
     </nav>
     <div class="login-container">
-      <h1 class="logo">weChat 💬</h1>
+      <h1 class="logo">weChat</h1>
       <p class="desc">Let's connect....</p>
       <div class="input">
         <button>👤</button>
@@ -31,6 +31,26 @@
 
       <div class="nav-links">
         <a href="/">Forgot Password ?</a>
+      </div>
+    </div>
+    <div class="chat-box-container">
+      <div class="friends-list"></div>
+      <div class="chat-box-wrapper">
+        <div class="active-chat-user">
+          <img
+            src="./svgs/user-solid.svg"
+            width="20px"
+            height="20px"
+            class="user-profile"
+          />
+          <h3 class="user-name-details">Madhu Roshan</h3>
+          <div class="call-option">📞</div>
+        </div>
+        <div class="chat-msg-container"></div>
+        <form>
+          <input type="text" class="msg-text" placeholder="Type Message..." />
+          <button class="send-btn" type="reset">⌲</button>
+        </form>
       </div>
     </div>
   </body>
