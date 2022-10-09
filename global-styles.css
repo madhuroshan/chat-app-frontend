@@ -38,17 +38,24 @@ nav {
 
 /* ***************************** CHAT BOX STYLES **************************************** */
 
+.chat-box-container {
+  display: none;
+  width: 50%;
+  margin: auto;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  height: 70vh;
+  padding: 1rem;
+}
+
 .chat-box-wrapper {
-  width: 20%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.4);
-  height: 70vh;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  margin-top: 5rem;
+  height: 100%;
 }
 
 .user-profile {
@@ -112,7 +119,57 @@ form {
   width: fit-content;
   padding: 8px;
   font-size: 13px;
-  border-radius: 500px;
+  border-radius: 10px;
   margin-bottom: 4px;
   margin-left: auto;
+}
+
+.chat-bubble:nth-last-child(1) {
+  animation: slideIn 200ms ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: scale(0.5);
+    /* margin-right: -100%; */
+  }
+
+  50% {
+    transform: scale(0.75);
+    /* margin-right: -50%; */
+  }
+
+  100% {
+    transform: scale(1);
+    /* margin-right: 0; */
+  }
+}
+
+/******************************* FRIENDS-LIST**************************** */
+
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.friend-contact-wrapper {
+  padding: 16px;
+  border-bottom: 2px solid pink;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.friend-icon {
+  height: 30px;
+  width: 30px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid rgb(224, 27, 126);
+}
+
+.friend-contact-wrapper h3,
+.friend-contact-wrapper p {
+  color: rgb(62, 54, 54);
 }
